@@ -18,7 +18,7 @@ function sendSMS(form) {
                 
   var linkData = {
                     tags: [],
-                    alias: 'aqwes222',
+                    alias: 'vikrammmm',
                     channel: 'Website',
                     feature: 'TextMeTheApp',
                     data: {
@@ -26,7 +26,7 @@ function sendSMS(form) {
                     }
                 };
                 
-  var options = {make_new_link: true};
+  var options = {make_new_link: false};
                 
   var callback = function(err) { console.log(err); }
   branch.sendSMS(phone, linkData, options, callback);
