@@ -12,27 +12,19 @@
     // init Branch
     branch.init('key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL');
       function sendSMS(form) {
-                var phone = form.phone.value;
-                var linkData = {
-                    tags: [],
-                    alias: 'llllll123'
-                    channel: 'Website',
-                    feature: 'TextMeTheApp',
-                    data: {
-                        'foo': 'bar'
-                    }
-                };
-                var options = {};
-                var callback = function(err, result) {
-                    if (err) {
-                        alert("Sorry, something went wrong.");
-                    }
-                    else {
-                        alert("SMS sent!");
-                    }
-                };
-                branch.sendSMS(phone, linkData, options, callback);
-                form.phone.value = "";
+  branch.sendSMS(
+    phone: form.phone.text,
+    {
+      channel: 'Website',
+      feature: 'Text-Me-The-App',
+      data: {
+        foo: 'bar'
+      }
+    },
+    { make_new_link: false }, // Default: false. If set to true, sendSMS will generate a new link even if one already exists.
+    function(err) { console.log(err); }
+  );
+               
             }
   </script>
 </head>
