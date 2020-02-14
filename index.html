@@ -12,17 +12,7 @@
     // init Branch
     branch.init('key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL');
       function sendSMS(form) {
-  branch.sendSMS(phone: form.phone.text,{
-      channel: 'Website',
-      feature: 'Text-Me-The-App',
-      data: {
-        foo: 'bar'
-      }
-    },
-    { make_new_link: false },
-    function(err) { console.log(err); }
-  );
-               
+      branch.sendSMS(phone: form.phone.text,{ channel: 'Website', feature: 'Text-Me-The-App', data: {foo: 'bar'}},{ make_new_link: false },function(err) { console.log(err); });
             }
   </script>
 </head>
