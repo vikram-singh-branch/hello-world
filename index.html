@@ -73,6 +73,12 @@ function sendSMS(form) {
         console.log(data);
         console.log(document.referrer);
     });
+    
+    branch.track(‘pageview’,
+    {
+        ‘vikram’ : ‘yes’
+    }
+);
     </script>
 
 </body>
