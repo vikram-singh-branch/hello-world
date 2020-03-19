@@ -3,12 +3,12 @@
   "name": "KIRUPA",
   "icons": [
     {
-      "src": "/images/create-octocat.png",
+      "src": "images/create-octocat.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/index.html?source=pwa",
+  "start_url": "/",
   "background_color": "#0099fe",
   "display": "standalone",
   "scope": "/",
