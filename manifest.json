@@ -3,7 +3,7 @@
   "name": "KIRUPA",
   "icons": [
     {
-      "src": "/images/orange_512.png",
+      "src": "/images/create-octocat.png",
       "type": "image/png",
       "sizes": "512x512"
     }
