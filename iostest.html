@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning JavaScript - Vanilla</title>
+</head>
+<body>
+
+    <button id="share">Share</button>
+
+    <script>
+
+        document.getElementById('share').addEventListener('click', function(e) {
+            if (navigator.share) { 
+                navigator.share({
+                    title: 'WebShare API Demo',
+                    url: 'https://juegostudio.in/SUGi/SHARE'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                })
+                .catch(console.error);
+                } else {
+                    alert('Share not available!')
+                }
+        });
+        
+    </script>
+</body>
+</html>
