@@ -23,7 +23,9 @@ function sendSMS(form) {
                     channel: 'Website',
                     feature: 'TextMeTheApp',
                     data: {
-                        'foo': 'bar'
+                        'foo': 'bar',
+                        '$fallback_url':'https://www.facebook.com',
+                        '$web_only': 'true'
                     }
                 };
                 
