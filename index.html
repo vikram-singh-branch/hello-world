@@ -89,36 +89,36 @@ function sendSMS(form) {
          
     }, function(err, data) {
         console.log(data);
-      branch.track('pageview',{
-        "vikram" : "no", "test" : 456
-    });
+//       branch.track('pageview',{
+//         "vikram" : "no", "test" : 456
+//     });
 
         console.log(document.referrer);
     });
     
-    branch.logEvent(
-   "PURCHASE",{},[], "dsasaaa",
-   function(err) { console.log(err); }
-);
+//     branch.logEvent(
+//    "PURCHASE",{},[], "dsasaaa",
+//    function(err) { console.log(err); }
+// );
 
     
     </script>
   
   <script type="text/javascript">
-     branch.track(‘pageview’,
-    {
-        "vikram" : "yes", "test123" : "456"
-    }
-);
+//      branch.track(‘pageview’,
+//     {
+//         "vikram" : "yes", "test123" : "456"
+//     }
+// );
     
   </script>
   <script type="text/javascript">
     
-     branch.track(‘vikram1’,
-    {
-        "vikram" : "yes"
-    }
-);
+//      branch.track(‘vikram1’,
+//     {
+//         "vikram" : "yes"
+//     }
+// );
   </script>
   <script>
     // This is the "Offline page" service worker
