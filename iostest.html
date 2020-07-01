@@ -14,19 +14,58 @@
 
     <script>
 
+        const clickOnSharebtn2 = document.getElementById("shareBtnBranchIo");
+  if (clickOnSharebtn2) {
+    const shareNavigator = window.navigator;
+    const shareableUrl = "www.discoveryplus.in" + "/show";
+    const linkData = {
+      data: {
+        $desktop_url: shareableUrl,
+        $canonical_identifier: shareableUrl,
+        $og_title: "man vs wild",
+        $twitter_image_url: `https://ap2-prod-images.disco-api.com/2020/04/20/8360824d-ae1b-30ac-adb4-12c21a0ed216.jpeg?bf=0&f=jpg&p=true&q=85&w=260`,
+        $og_image_width: "1080",
+        $og_image_height: "200",
+        $twitter_title: "man vs wild",
+        $og_image_url: `https://ap2-prod-images.disco-api.com/2020/04/20/8360824d-ae1b-30ac-adb4-12c21a0ed216.jpeg?bf=0&f=jpg&p=true&q=85&w=260`
+      }
+    };
+    const src = “”;
+      
         document.getElementById('share').addEventListener('click', function(e) {
-            if (navigator.share) { 
-                navigator.share({
-                    title: 'WebShare API Demo',
-                    url: 'https://branchster.app.link/40mozWdXe6'
-                }).then(() => {
-                    console.log('Thanks for sharing!');
-                })
-                .catch(console.error);
-                } else {
-                    alert('Share not available!')
-                }
+             try {
+        branch.link(linkData, function(err: string) {
+          if (shareNavigator && shareNavigator.share) {
+            shareNavigator
+              .share({
+                title: "Cake Boss",
+                text: `Watch ${`'`}${name}${`'`} now on Discovery Plus `,
+                image: { source: src, mimeType: "image/jpeg" }
+              })
+              .then(() => console.warn("Successful share"))
+              .catch((err: any) =>
+                console.info("Error in sharing from branch io", err)
+              );
+          } else {
+            alert("share not supported");
+          }
         });
+      } catch (err) {
+      }
+    });
+//   }
+//             if (navigator.share) { 
+//                 navigator.share({
+//                     title: 'WebShare API Demo',
+//                     url: 'https://branchster.app.link/40mozWdXe6'
+//                 }).then(() => {
+//                     console.log('Thanks for sharing!');
+//                 })
+//                 .catch(console.error);
+//                 } else {
+//                     alert('Share not available!')
+//                 }
+//         });
         
     </script>
 </body>
