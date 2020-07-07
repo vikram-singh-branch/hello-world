@@ -92,6 +92,11 @@ function sendSMS(form) {
       branch.track('pageview',{
         "vikram" : "no", "test" : 456
     });
+      
+       branch.logEvent(
+   "PURCHASE",{},[], "dsasaaa",
+   function(err) { console.log(err); }
+);
 
         console.log(document.referrer);
     });
@@ -120,10 +125,7 @@ function sendSMS(form) {
     }
 );
     
-    branch.logEvent(
-   "PURCHASE",{},[], "dsasaaa",
-   function(err) { console.log(err); }
-);
+   
   </script>
   <script>
     // This is the "Offline page" service worker
