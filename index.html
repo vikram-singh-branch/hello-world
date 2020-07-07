@@ -114,11 +114,16 @@ function sendSMS(form) {
   </script>
   <script type="text/javascript">
     
-//      branch.track(‘vikram1’,
-//     {
-//         "vikram" : "yes"
-//     }
-// );
+     branch.track(‘vikram1’,
+    {
+        "vikram" : "yes"
+    }
+);
+    
+    branch.logEvent(
+   "PURCHASE",{},[], "dsasaaa",
+   function(err) { console.log(err); }
+);
   </script>
   <script>
     // This is the "Offline page" service worker
