@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta>
+    <meta charset="UTF-8">
+    <title>Hello World in Vue.js</title>
+  </meta>
+  <head>
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async src="https://cdn.ampproject.org/v0/amp-list-0.1.js" custom-element="amp-list"></script>
+    <script async src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js" custom-template="amp-mustache">
+    </script><script async src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js" custom-element="amp-iframe"></script>
+  </head>
+
+  <body>
+
+    <div id="hello-world-app">
+      <h1>{{ msg }}</h1>
+    </div>
+
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js">
+    </script>
+
+    <script>
+      new Vue({
+        el: "#hello-world-app",
+        data() {
+          return {
+            msg: "Hello World!"
+          }
+        }
+      });
+    </script>
+<amp-list tabindex=0 role="" on="tap:branch-amp-journey.hide" id="branch-amp-journey" src="https://bl.app.link/branch-amp-journeys-pre?branch_key=key_live_ieFc1qYeotbO33oyAuLrBkidzwf7P2uN&amp;__aj_cid=CLIENT_ID(_s)&amp;__amp_viewer=VIEWER&amp;__aj_source_url=SOURCE_URL&amp;__aj_canonical_url=CANONICAL_URL&amp;__aj_v=1.0.0" layout=fixed-height height="77px"><template type="amp-mustache" id="journey-template"><a class="close" on="tap:branch-amp-journey.hide"></a><div class="hideme" ></div><amp-iframe class="branch-amp-journey-inner {{do_not_display}}" layout="fixed-height" height="77px" resizable src="https://bl.app.link/branch-amp-journeys?branch_key=key_live_ieFc1qYeotbO33oyAuLrBkidzwf7P2uN&amp;__aj_cid={{__aj_cid}}&amp;__aj_source_url={{__aj_source_url}}&amp;__aj_canonical_url={{__aj_canonical_url}}&amp;_audience_rule_id={{_audience_rule_id}}&amp;_branch_view_id={{_branch_view_id}}&amp;__aj_v=1.0.0" sandbox="allow-scripts allow-top-navigation allow-same-origin" frameborder="0"><div overflow></div></amp-iframe></template></amp-list>
+  </body>
+</html>
