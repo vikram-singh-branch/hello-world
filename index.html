@@ -29,7 +29,7 @@ function sendSMS(form) {
   var options = {make_new_link: false};
                 
   var callback = function(err) { console.log(err); }
-  branch.sendSMSsendSMS(
+  branch.sendSMS(
 phone,
 {
 tags: ['tag1', 'tag2'],
@@ -41,6 +41,7 @@ mydata: 'something',
 foo: 'bar',
 $desktop_url: 'http://myappwebsite.com',
 $ios_url: 'http://myappwebsite.com/ios',
+  browser_fingerprint_id: '79336952217731267',
 $ipad_url: 'http://myappwebsite.com/ipad',
 $android_url: 'http://myappwebsite.com/android',
 $og_app_id: '12345',
