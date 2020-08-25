@@ -29,7 +29,30 @@ function sendSMS(form) {
   var options = {make_new_link: false};
                 
   var callback = function(err) { console.log(err); }
-  branch.sendSMS(phone, linkData, options, callback);
+  branch.sendSMSsendSMS(
+'+13127749029',
+{
+tags: ['tag1', 'tag2'],
+channel: 'facebook',
+feature: 'dashboard',
+stage: 'new user',
+data: {
+mydata: 'something',
+browser_fingerprint_id: '79336952217731267',
+foo: 'bar',
+$desktop_url: 'http://myappwebsite.com',
+$ios_url: 'http://myappwebsite.com/ios',
+$ipad_url: 'http://myappwebsite.com/ipad',
+$android_url: 'http://myappwebsite.com/android',
+$og_app_id: '12345',
+$og_title: 'My App',
+$og_description: 'My app\'s description.',
+$og_image_url: 'http://myappwebsite.com/image.png',
+},
+},
+{ make_new_link: true }, // Default: false. If set to true, sendSMS will generate a new link even if one already exists.
+(err) => { console.log(err); },
+);
 }
 </script>
 </head>
