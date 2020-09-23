@@ -28,9 +28,7 @@ function sendSMS(form) {
                 
   var options = {make_new_link: false};
   
-  branch.link(linkData function(err, link) {
-  console.log(link);
-});
+  branch.link(linkData function(err, link) {console.log(link)});
                 
   var callback = function(err) { console.log(err); }
   branch.sendSMS(
