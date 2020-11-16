@@ -23,10 +23,10 @@ function sendSMS(form) {
                     channel: 'Website',
                     feature: 'TextMeTheApp',
                     data: {
-                        '$custom_sms_text':'custom sms copy {{ link }}',
+                        $custom_sms_text:'custom sms copy {{ link }}',
                         'foo': 'bar',
                         '$fallback_url':'https://www.google.com',
-                        '$web_only': 'true'
+                        $web_only: 'true'
                     }
                 };
                 
