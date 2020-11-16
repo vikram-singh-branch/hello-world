@@ -32,13 +32,11 @@ function sendSMS(form) {
                 
   var options = {make_new_link: false};
   
-  branch.link(linkData, function(err, link) {console.log(link)});
+//   branch.link(linkData, function(err, link) {console.log(link)});
                 
   var callback = function(err) { console.log(err); }
-  branch.sendSMS(
-  phone,linkData,{ make_new_link: false },
-    (err) => { console.log(err); },
-  );
+  branch.sendSMS(phone,linkData,options,callback);
+  return false;
 }
 </script>
 </head>
@@ -49,7 +47,7 @@ function sendSMS(form) {
   <img style="color:blue; z-index:111;" src="https://via.placeholder.com/300.png/09f/fff" align="bottom" alt="Slajd" class="slajd" height="100%">
   
         Send SMS
-        <form onsubmit="sendSMS(this); return false;">
+        <form onsubmit="return sendSMS(this)">
             <input id="phone" name="phone" type="tel" placeholder="(650) 123-4567" />
             <br/>
             <input type="submit"/>
@@ -93,7 +91,7 @@ function sendSMS(form) {
     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId".split(" "), 0);
 
     // .init call to launch banner
-    branch.init('key_live_igCEM5X4N6Yl02KBqZyMIankyEbbg9lJ',{
+    branch.init('key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL',{
          
     }, function(err, data) {
         console.log(data);
