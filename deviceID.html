@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:700,300' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+			background-color: #FFFFFF;
+			margin: 0;
+		}
+		/* Elements */
+		.card {
+			background-color: #FCFCFC;
+			width: 830px;
+			/* Natali check this */
+			display: flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: -moz-flex;
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			-moz-flex-direction: row;
+		}
+		#main-image {
+			width: 360px;
+			/* We should pick a "standard" nice round size for this. 521px seems arbitrary */
+			height: 360px;
+			/* ditto */
+			background-size: cover;
+			background-position: center;
+			background-image: url(https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/ac/b8/cf/acb8cf56-26f6-fbce-698a-019643b0a3a4/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/1024x1024bb.png);
+		}
+		#content-container {
+			position: relative;
+			float: right;
+			flex: 1;
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			-moz-flex: 1;
+			padding: 24px;
+		}
+		.app-title {
+			font-size: 14px;
+			line-height: 19px;
+			padding-bottom: 20px;
+			border-bottom-width: 3px;
+			border-bottom-style: solid;
+			border-bottom-color: #CECECE;
+			text-transform: uppercase;
+		}
+		.card-title {
+			padding-top: 20px;
+			font-size: 32px;
+			line-height: 32px;
+		}
+		.app-content {
+			padding-top: 16px;
+		}
+		.input-container {
+			position: absolute;
+			bottom: 10px;
+			left: 24px;
+			right: 24px;
+		}
+		form>input {
+			margin-right: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			flex: 1;
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			-moz-flex: 1;
+			background-color: #FFFFFF;
+			border: 1px solid #979797;
+			border-radius: 2px;
+			font-size: 18px;
+			color: #444444;
+			line-height: 24px;
+			padding-left: 20px;
+		}
+		button {
+			background-color: #444444;
+			border: 1px solid #444444;
+			border-radius: 2px;
+			font-size: 20px;
+			color: #FFFFFF;
+			line-height: 27px;
+			cursor: pointer;
+		}
+		.input-container>form {
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			-moz-flex-direction: row;
+			-ms-flex-direction: row;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: flex;
+		}
+		.input-label {
+			padding-bottom: 10px;
+		}
+		/* Reusables */
+		.center {
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+			position: fixed;
+		}
+		.bold {
+			font-family: 'Open Sans', Helvetica, serif;
+			font-weight: 700
+		}
+		.light {
+			font-family: 'Open Sans', Helvetica, serif;
+			font-weight: 300;
+		}
+		.error {
+			color: #FF7878;
+		}
+	</style>
+	<script>
+	(function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
+	branch.init('key_live_lmJDv2hI9NuyiSzLNO3UVfmpCAk13Cbt');
+	</script>
+</head>
+<body>
+	<div class="card center">
+		<div id="main-image"></div>
+		<div id="content-container">
+			<div class="app-title bold">Easily Find and share Device Info</div>
+			<div class="card-title light">Branch - Device ID Finder</div>
+			<div class="app-content light">An ideal tool for developers, customer support and marketing professionals to quickly copy and share the ID of your mobile device</div>
+			<div class="input-container">
+				<div class="input-label light">Scan the QR Code to download the app</div>
+				<img src="https://cdn.branch.io/branch-assets/1612892980679-og_image.jpeg" height="100">
+			</div>
+		</div>
+	</div>
+	<script>
+		var event_and_custom_data = {
+			"description": "Web Landing Page"
+		};
+		var content_items = [{
+			"$sku": "1001",
+			"$product_name": "Device ID Finder"
+		}];
+		var customer_event_alias = "VIEW_WEB_PAGE";
+		branch.logEvent(
+			"VIEW_ITEMS",
+			event_and_custom_data,
+			content_items,
+			customer_event_alias,
+			function(err) {
+				console.log(err);
+			}
+		);
+	</script>
+	<body>
+</html>
