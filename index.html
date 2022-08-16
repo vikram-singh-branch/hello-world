@@ -76,6 +76,10 @@ function sendSMS(form) {
        
     
    <img src="inc/img/slajder_bg.jpg" alt="Slajd" class="slajd">
+    
+    <button onclick="setID()">Set ID</button>
+    <button onclick="logout()">Logout</button>
+    <button onclick="track()">Track Purchase</button>
 
     </div>
   
@@ -124,6 +128,21 @@ function sendSMS(form) {
     
   </script>
   <script type="text/javascript">
+    function setID() {
+      branch.setIdentity('pikachu', function (err, data) {
+        console.log(err, data);
+      });
+    }
+    function logout() {
+      branch.logout(function(err, data) {
+        console.log(err, data);
+      });
+    }
+    function track() {
+      branch.logEvent("PURCHASE",{},[], "ali0",
+        function(err) { console.log(err); }
+      );
+    }
     
 //      branch.track(‘vikram1’,
 //     {
