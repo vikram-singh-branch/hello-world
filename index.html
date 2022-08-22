@@ -83,6 +83,8 @@ function sendSMS(form) {
 
     </div>
   
+  <div id="bfp"></div>
+  
   
  <h1>Zip Ads</h1>
   <a href="https://zip.co/vcn?%24deeplink_path=deeplink%2Fexplore%2Fshop%2Fhttps%3A%2F%2Fshop.coles.com.au%2Fa%2Fnational%2Fspecials%2Fsearch%2Fhalf-price-specials%3Fpid%3Dpr_Horizontal_Homepage_WTD_HalfPrice" universal="true" > click zip </h1>
@@ -172,6 +174,9 @@ if ("serviceWorker" in navigator) {
       });
   }
 }
+    
+    branch.getBrowserFingerprintId(function(err, data) { document.getElementById("bfp").innerHTML = data;});
+
     
    
 </script>
