@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <input id="devid" name="devid" />
+      <button onclick="setID()">Set ID</button>
+      <button onclick="logout()">Logout</button>
+      <button onclick="track()">Track Purchase</button>
+      </div>  
+      <script type="text/javascript">
+         (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId".split(" "), 0);
+         
+         // .init call to launch banner
+         branch.init('key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL',{}, function(err, data) {
+             console.log(data);
+             console.log(document.referrer);
+         });
+      </script>
+      <script type="text/javascript">
+         function setID() {
+           var id = document.getElementById('devid').value
+           branch.setIdentity(id, function (err, data) {
+             console.log(err, data);
+           });
+         }
+         function logout() {
+           branch.logout(function(err, data) {
+             console.log(err, data);
+           });
+         }
+         function track() {
+           branch.logEvent("PURCHASE",{},[], "ali0",
+             function(err) { console.log(err); }
+           );
+         }
+      </script>
+   </body>
+</html>
