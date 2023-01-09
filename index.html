@@ -76,7 +76,7 @@ function sendSMS(form) {
        
     
    <img src="inc/img/slajder_bg.jpg" alt="Slajd" class="slajd">
-    
+    <input id="devid" name="devid" />
     <button onclick="setID()">Set ID</button>
     <button onclick="logout()">Logout</button>
     <button onclick="track()">Track Purchase</button>
@@ -129,7 +129,8 @@ function sendSMS(form) {
   </script>
   <script type="text/javascript">
     function setID() {
-      branch.setIdentity('jiggly', function (err, data) {
+      var id = document.getElementById('devid').value
+      branch.setIdentity(id, function (err, data) {
         console.log(err, data);
       });
     }
